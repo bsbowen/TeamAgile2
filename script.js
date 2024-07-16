@@ -26,9 +26,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const renderPosts = (filter = "") => {
         //Clears previous content in the feed container before updating with the new content
         feed.innerHTML = "";
+        const lowerCaseFilter = filter.toLowerCase();
         posts
-            .filter(post => post.content.includes(filter) || post.tags.includes(filter))
-            .forEach((post, index) => {
+        .filter(post => 
+            post.content.toLowerCase().includes(lowerCaseFilter) || 
+            post.tags.toLowerCase().includes(lowerCaseFilter) || 
+            post.author.toLowerCase().includes(lowerCaseFilter))
+        .forEach((post, index) => {
                 const postElement = document.createElement("div");
                 postElement.classList.add("post");
                 postElement.innerHTML = `
