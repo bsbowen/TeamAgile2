@@ -1,15 +1,22 @@
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
 }
+
 
 .container {
     max-width: 600px;
     margin: auto;
     padding: 20px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
+
 
 form {
     display: flex;
@@ -17,11 +24,16 @@ form {
     margin-bottom: 20px;
 }
 
+
 textarea, input {
     margin-bottom: 10px;
     padding: 10px;
     font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
+
 
 #charCount {
     font-size: 0.9rem;
@@ -29,22 +41,28 @@ textarea, input {
     margin-bottom: 10px;
 }
 
+
 button {
     padding: 10px;
     background-color: #007bff;
     color: white;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
 
 button:hover {
     background-color: #0056b3;
 }
 
+
 #feed {
     display: flex;
     flex-direction: column;
 }
+
 
 .post {
     background-color: #f8f9fa;
@@ -52,10 +70,13 @@ button:hover {
     margin-bottom: 10px;
     border-radius: 5px;
     position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 
 .post-content {
     margin-bottom: 10px;
+    font-size: 1rem;
 }
 
 .post-info {
@@ -63,19 +84,30 @@ button:hover {
     color: #6c757d;
 }
 
+
 .edit, .delete {
     position: absolute;
     top: 10px;
     cursor: pointer;
+    color: #007bff;
+    transition: color 0.3s ease;
 }
 
+
 .edit {
-    right: 50px;
+    right: 60px;
 }
+
 
 .delete {
     right: 10px;
 }
+
+
+.edit:hover, .delete:hover {
+    color: #0056b3;
+}
+
 
 @media (max-width: 600px) {
     .container {
@@ -89,4 +121,13 @@ button:hover {
     .post {
         padding: 8px;
     }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
 }
+
+
+
+
