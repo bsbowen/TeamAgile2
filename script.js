@@ -1,4 +1,7 @@
+//Adding an event listener to ensure the DOM is fully loaded before executing the JavaScript
 document.addEventListener("DOMContentLoaded", () => {
+    
+    //Selecting DOM elements by id and assigning them to variables
     const postForm = document.getElementById("postForm");
     const postContent = document.getElementById("postContent");
     const postAuthor = document.getElementById("postAuthor");
@@ -7,15 +10,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const feed = document.getElementById("feed");
     const search = document.getElementById("search");
 
+    //Retrieving posts from localStorage or initializing an empty array
+    //Parsing the JSON response string into a data object
     let posts = JSON.parse(localStorage.getItem("posts")) || [];
 
+    //Arrow function to update character count in the textarea
     const updateCharCount = () => {
         charCount.textContent = `${postContent.value.length}/280`;
     };
 
+    //Adding an event listener for input in the postContent textarea to update character count
     postContent.addEventListener("input", updateCharCount);
 
+    //Arrow function to render posts based on optional filter parameter
     const renderPosts = (filter = "") => {
+        //Clears previous content in the feed container before updating with the new content
         feed.innerHTML = "";
         posts
             .filter(post => post.content.includes(filter) || post.tags.includes(filter))
