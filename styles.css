@@ -8,10 +8,11 @@ body {
 }
 
 .container {
-    max-width: 800px; /* Increase max-width for a bigger container */
+    max-width: 1000px; /* Increase max-width for a bigger container */
+    min-height: auto;
     margin: auto;
     padding: 40px; /* Increase padding for more space */
-    background: white;
+    background: #75ccff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     display: grid;
@@ -21,14 +22,16 @@ body {
 
 .left-sidebar {
     /* Styles for the left sidebar */
-    background-color: #75ccff;
+    background-color: white;
     padding: 20px; /* Increase padding for more space */
+    border-radius: 10px; /* Rounded corners */
 }
 
 .right-sidebar {
     /* Styles for the right sidebar */
-    background-color: #75ccff;
+    background-color: white;
     padding: 20px; /* Increase padding for more space */
+    border-radius: 10px; /* Rounded corners */
 }
 
 form {
