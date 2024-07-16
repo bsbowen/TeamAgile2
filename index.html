@@ -3,35 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Title of the webpage-->
+    <!-- Title of the webpage -->
     <title>Mock Social Media Feed</title>
-    <!--Links to the external CSS stylesheet-->
+    <!-- Link to the external CSS stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!--Main container of body-->
+    <!-- Main container of body -->
     <div class="container">
-        <!--Main heading-->
-        <h1>Mock Social Media Feed</h1>
-        <!--Form for submitting posts-->
-        <form id="postForm">
-            <!--Textarea for post content with placeholder and character limit of 280-->
-            <textarea id="postContent" placeholder="What's happening?" maxlength="280" required></textarea>
-            <!--Character count display-->
-            <div id="charCount">0/280</div>
-            <!--Input field for post author-->
-            <input type="text" id="postAuthor" placeholder="Author" required>
-            <!--Input field for post tags-->
-            <input type="text" id="postTags" placeholder="Tags (comma separated)">
-            <!--Submit button for posting-->
-            <button type="submit">Post</button>
-        </form>
-        <!--Input field for searching posts-->
-        <input type="text" id="search" placeholder="Search by keyword">
-        <!--Container for displaying posts-->
-        <div id="feed"></div>
+        <!-- Left sidebar for links to other pages -->
+        <div class="left-sidebar">
+            <h2>Links</h2>
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+            </ul>
+        </div>
+
+        <!-- Main content area -->
+        <div class="main-content">
+            <!-- Main heading -->
+            <h1>Mock Social Media Feed</h1>
+            <!-- Form for submitting posts -->
+            <form id="postForm">
+                <!-- Textarea for post content with placeholder and character limit of 280 -->
+                <textarea id="postContent" placeholder="What's happening?" maxlength="280" required></textarea>
+                <!-- Character count display -->
+                <div id="charCount">0/280</div>
+                <!-- Input field for post author -->
+                <input type="text" id="postAuthor" placeholder="Author" required>
+                <!-- Input field for post tags -->
+                <input type="text" id="postTags" placeholder="Tags (comma separated)">
+                <!-- Submit button for posting -->
+                <button type="submit">Post</button>
+            </form>
+            <!-- Input field for searching posts -->
+            <input type="text" id="search" placeholder="Search by keyword">
+            <!-- Container for displaying posts -->
+            <div id="feed"></div>
+        </div>
+
+        <!-- Right sidebar for news feed stories -->
+        <div class="right-sidebar">
+            <h2>News Feed</h2>
+            <div class="news-story">
+                <h3>News Story 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero eget feugiat pulvinar.</p>
+            </div>
+            <div class="news-story">
+                <h3>News Story 2</h3>
+                <p>Integer vitae nisi ultrices, vestibulum velit non, fringilla metus.</p>
+            </div>
+            <!-- Add more news stories as needed -->
+        </div>
     </div>
-    <!--Links to the external JavaScript file-->
+    <!-- Links to the external JavaScript file -->
     <script src="script.js"></script>
 </body>
 </html>
