@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Social Media Feed</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Mock Social Media Feed</h1>
+        <form id="postForm">
+            <textarea id="postContent" placeholder="What's happening?" maxlength="280" required></textarea>
+            <div id="charCount">0/280</div>
+            <input type="text" id="postAuthor" placeholder="Author" required>
+            <input type="text" id="postTags" placeholder="Tags (comma separated)">
+            <button type="submit">Post</button>
+        </form>
+        <input type="text" id="search" placeholder="Search by keyword">
+        <div id="feed"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

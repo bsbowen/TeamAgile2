@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+textarea, input {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+#charCount {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#feed {
+    display: flex;
+    flex-direction: column;
+}
+
+.post {
+    background-color: #f8f9fa;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.post-content {
+    margin-bottom: 10px;
+}
+
+.post-info {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.edit, .delete {
+    position: absolute;
+    top: 10px;
+    cursor: pointer;
+}
+
+.edit {
+    right: 50px;
+}
+
+.delete {
+    right: 10px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    textarea, input {
+        font-size: 0.9rem;
+    }
+
+    .post {
+        padding: 8px;
+    }
+}
