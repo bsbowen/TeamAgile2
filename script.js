@@ -48,8 +48,8 @@ document.addEventListener("DOMContentLoaded", () => {
                         <span>${post.date}</span> | 
                         <span>${post.tags}</span>
                     </div>
-                    <span class="like" onclick="toggleLike(${index})">Like (${post.likes})</span>
-                    <span class="dislike" onclick="toggleDislike(${index})">Dislike (${post.dislikes})</span>
+                    <button class="like" onclick="toggleLike(${index})">Like (${post.likes})</button>
+                    <button class="dislike" onclick="toggleDislike(${index})">Dislike (${post.dislikes})</button>
                     <span class="edit" onclick="editPost(${index})">Edit</span>
                     <span class="delete" onclick="deletePost(${index})">Delete</span>
                 `;

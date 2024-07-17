@@ -95,6 +95,8 @@ li a:hover {
     background-color: white;
     padding: 20px; /* Increase padding for more space */
     border-radius: 10px; /* Rounded corners */
+    height: calc(100vh - 80px); /* Ensure it takes full height of the viewport minus padding */
+    overflow-y: auto; /* Make it scrollable */
 }
 
 form {
