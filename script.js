@@ -69,6 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Check if an image file was selected
         let imageBase64 = "";
+        
         if (imageInput.files && imageInput.files[0]) {
             // Read the selected image file
             const file = imageInput.files[0];
