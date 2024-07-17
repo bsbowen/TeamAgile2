@@ -48,6 +48,8 @@ document.addEventListener("DOMContentLoaded", () => {
                         <span>${post.date}</span> | 
                         <span>${post.tags}</span>
                     </div>
+                    <span class="like" onclick="toggleLike(${index})">Like (${post.likes})</span>
+                    <span class="dislike" onclick="toggleDislike(${index})">Dislike (${post.dislikes})</span>
                     <span class="edit" onclick="editPost(${index})">Edit</span>
                     <span class="delete" onclick="deletePost(${index})">Delete</span>
                 `;
@@ -75,6 +77,8 @@ document.addEventListener("DOMContentLoaded", () => {
             //Sets the date to the current timestamp
             date: new Date().toLocaleString(),
             tags: postTags.value,
+            likes: 0,        // Initialize likes
+            dislikes: 0      // Initialize dislikes
         };
 
         //Adding a new post to the posts array
@@ -125,6 +129,57 @@ document.addEventListener("DOMContentLoaded", () => {
         renderPosts();
     };
 
+ // Toggle Like function
+ window.toggleLike = (index) => {
+    const post = posts[index];
+    if (post.likeState === "liked") {
+        post.likes -= 1;
+        post.likeState = "neutral";
+    } else {
+        post.likes += 1;
+        post.likeState = "liked";
+        // Ensure dislikes are reset when liking
+        post.dislikes = 0;
+    }
+    localStorage.setItem("posts", JSON.stringify(posts));
+    renderPosts();
+};
+
+// Toggle Dislike function
+window.toggleDislike = (index) => {
+    const post = posts[index];
+    if (post.likeState === "disliked") {
+        post.dislikes -= 1;
+        post.likeState = "neutral";
+    } else {
+        post.dislikes += 1;
+        post.likeState = "disliked";
+        // Ensure likes are reset when disliking
+        post.likes = 0;
+    }
+    localStorage.setItem("posts", JSON.stringify(posts));
+    renderPosts();
+};
+
+// Initialize likeState for existing posts
+posts.forEach(post => {
+    post.likeState = "neutral"; // Neutral state initially
+});
+
+     // Toggle Read more/less function
+     window.toggleReadMore = (button) => {
+        const moreText = button.previousElementSibling;
+        if (moreText.style.display === "none") {
+            moreText.style.display = "inline";
+            button.parentNode.appendChild(button); // Move button to bottom
+            button.textContent = "Read less";
+        } else {
+            moreText.style.display = "none";
+            button.textContent = "Read more";
+        }
+    };
+
+    
     //Calling the initial rendering of posts when page is loaded
     renderPosts();
     //Calling the initial update of character count when page is loaded
