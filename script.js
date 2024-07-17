@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const charCount = document.getElementById("charCount");
     const feed = document.getElementById("feed");
     const search = document.getElementById("search");
+    
 
     //Retrieving posts from localStorage or initializing an empty array
     //Parsing the JSON response string into a data object
@@ -80,6 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
             likes: 0,        // Initialize likes
             dislikes: 0      // Initialize dislikes
         };
+
 
         //Adding a new post to the posts array
         posts.push(newPost);
