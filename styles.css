@@ -20,6 +20,11 @@ body {
     gap: 20px; /* Gap between columns */
 }
 
+.top-box {
+
+    grid-column: 1 /4;
+}
+
 .left-sidebar {
     /* Styles for the left sidebar */
     background-color: white;
@@ -29,13 +34,15 @@ body {
 
 .logo {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 2px;
 }
 
 .logo img {
     max-width: 200px;
     height: auto;
 }
+
+
 
 h2 {
     font-size: 1.5rem;
