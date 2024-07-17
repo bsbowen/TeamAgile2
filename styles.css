@@ -33,7 +33,7 @@ body {
 }
 
 .logo img {
-    width: 100px;
+    max-width: 200px;
     height: auto;
 }
 
@@ -64,6 +64,24 @@ li a:hover {
     color: #0056b3; /* Darker blue on hover */
 }
 
+.sponsor-link {
+    display: block; /* Make the link a block element for better spacing */
+    margin-top: 20px; /* Add margin above the image link */
+    text-align: center; /* Center the image horizontally */
+}
+
+.sponsor-link img {
+    max-width: 200px; /* Set the width of the image */
+    height: auto; /* Maintain aspect ratio */
+    border: 1px solid #ccc; /* Optional: Add a border around the image */
+    border-radius: 5px; /* Optional: Add border radius for rounded corners */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+.sponsor-link:hover img {
+    opacity: 0.8; /* Optional: Reduce opacity on hover */
+    transition: opacity 0.3s ease; /* Optional: Add a smooth transition effect */
+}
 
 .right-sidebar {
     /* Styles for the right sidebar */
