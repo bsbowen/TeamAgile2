@@ -4,32 +4,40 @@ body {
     padding: 0;
     box-sizing: border-box;
     background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-    min-height: 100vh; /* Ensure full viewport height */
+    min-height: 100vh;
+    /* Ensure full viewport height */
 }
 
 .container {
-    max-width: 1000px; /* Increase max-width for a bigger container */
+    max-width: 1000px;
+    /* Increase max-width for a bigger container */
     min-height: auto;
     margin: auto;
-    padding: 40px; /* Increase padding for more space */
+    padding: 40px;
+    /* Increase padding for more space */
     background: #75ccff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr; /* Three columns: left sidebar, main content, right sidebar */
-    gap: 20px; /* Gap between columns */
+    grid-template-columns: 1fr 2fr 1fr;
+    /* Three columns: left sidebar, main content, right sidebar */
+    gap: 20px;
+    /* Gap between columns */
 }
 
 .top-box {
 
     grid-column: 1 /4;
+    grid-area#06060600;
 }
 
 .left-sidebar {
     /* Styles for the left sidebar */
     background-color: white;
-    padding: 20px; /* Increase padding for more space */
-    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    /* Increase padding for more space */
+    border-radius: 10px;
+    /* Rounded corners */
 }
 
 .logo {
@@ -62,32 +70,44 @@ li {
 
 li a {
     text-decoration: none;
-    color: #007bff; /* Blue link color */
+    color: #007bff;
+    /* Blue link color */
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 li a:hover {
-    color: #0056b3; /* Darker blue on hover */
+    color: #0056b3;
+    /* Darker blue on hover */
 }
 
 .sponsor-link {
-    display: block; /* Make the link a block element for better spacing */
-    margin-top: 20px; /* Add margin above the image link */
-    text-align: center; /* Center the image horizontally */
+    display: block;
+    /* Make the link a block element for better spacing */
+    margin-top: 20px;
+    /* Add margin above the image link */
+    text-align: center;
+    /* Center the image horizontally */
 }
 
 .sponsor-link img {
-    max-width: 200px; /* Set the width of the image */
-    height: auto; /* Maintain aspect ratio */
-    border: 1px solid #ccc; /* Optional: Add a border around the image */
-    border-radius: 5px; /* Optional: Add border radius for rounded corners */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    max-width: 200px;
+    /* Set the width of the image */
+    height: auto;
+    /* Maintain aspect ratio */
+    border: 1px solid #ccc;
+    /* Optional: Add a border around the image */
+    border-radius: 5px;
+    /* Optional: Add border radius for rounded corners */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    /* Optional: Add a subtle shadow */
 }
 
 .sponsor-link:hover img {
-    opacity: 0.8; /* Optional: Reduce opacity on hover */
-    transition: opacity 0.3s ease; /* Optional: Add a smooth transition effect */
+    opacity: 0.8;
+    /* Optional: Reduce opacity on hover */
+    transition: opacity 0.3s ease;
+    /* Optional: Add a smooth transition effect */
 }
 
 .right-sidebar {
@@ -102,26 +122,34 @@ li a:hover {
 form {
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px; /* Increase margin bottom for more space */
+    margin-bottom: 30px;
+    /* Increase margin bottom for more space */
 }
 
-textarea, input {
-    margin-bottom: 15px; /* Increase margin bottom for more space */
-    padding: 15px; /* Increase padding for more space */
-    font-size: 1.1rem; /* Increase font size for better readability */
+textarea,
+input {
+    margin-bottom: 15px;
+    /* Increase margin bottom for more space */
+    padding: 15px;
+    /* Increase padding for more space */
+    font-size: 1.1rem;
+    /* Increase font size for better readability */
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 #charCount {
-    font-size: 1rem; /* Increase font size for better readability */
+    font-size: 1rem;
+    /* Increase font size for better readability */
     color: #6c757d;
-    margin-bottom: 15px; /* Increase margin bottom for more space */
+    margin-bottom: 15px;
+    /* Increase margin bottom for more space */
 }
 
 button {
-    padding: 15px; /* Increase padding for more space */
+    padding: 15px;
+    /* Increase padding for more space */
     background-color: #007bff;
     color: white;
     border: none;
@@ -141,40 +169,50 @@ button:hover {
 
 .post {
     background-color: #f8f9fa;
-    padding: 15px; /* Increase padding for more space */
-    margin-bottom: 15px; /* Increase margin bottom for more space */
+    padding: 15px;
+    /* Increase padding for more space */
+    margin-bottom: 15px;
+    /* Increase margin bottom for more space */
     border-radius: 5px;
     position: relative;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .post-content {
-    margin-bottom: 15px; /* Increase margin bottom for more space */
-    font-size: 1.1rem; /* Increase font size for better readability */
+    margin-bottom: 15px;
+    /* Increase margin bottom for more space */
+    font-size: 1.1rem;
+    /* Increase font size for better readability */
 }
 
 .post-info {
-    font-size: 1rem; /* Increase font size for better readability */
+    font-size: 1rem;
+    /* Increase font size for better readability */
     color: #6c757d;
 }
 
-.edit, .delete {
+.edit,
+.delete {
     position: absolute;
-    top: 15px; /* Increase top position for more space */
+    top: 15px;
+    /* Increase top position for more space */
     cursor: pointer;
     color: #007bff;
     transition: color 0.3s ease;
 }
 
 .edit {
-    right: 70px; /* Adjust right position for more space */
+    right: 70px;
+    /* Adjust right position for more space */
 }
 
 .delete {
-    right: 20px; /* Adjust right position for more space */
+    right: 20px;
+    /* Adjust right position for more space */
 }
 
-.edit:hover, .delete:hover {
+.edit:hover,
+.delete:hover {
     color: #0056b3;
 }
 
@@ -183,7 +221,8 @@ button:hover {
         padding: 20px;
     }
 
-    textarea, input {
+    textarea,
+    input {
         font-size: 1rem;
     }
 
