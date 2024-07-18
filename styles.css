@@ -13,6 +13,18 @@ h2 {
     margin-bottom: 15px;
 }
 
+.post {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px; /* Adjust spacing between posts */
+    padding: 15px;
+}
+
+.post-content {
+    margin-bottom: 10px;
+}
+
 .post-image {
     max-width: 100%;
     /* Ensure image does not exceed container width */
