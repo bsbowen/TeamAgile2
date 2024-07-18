@@ -1,171 +1,181 @@
+/* General styling for the entire page */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background: #75ccff;
-    min-height: 100vh;
+    font-family: Arial, sans-serif; /* Use Arial or sans-serif fonts */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    background: #75ccff; /* Light blue background color */
+    min-height: 100vh; /* Ensure the body fills at least the viewport height */
 }
 
+/* Styling for level 2 headings */
 h2 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 15px;
+    font-size: 1.5rem; /* Font size for h2 elements */
+    color: #333; /* Dark gray text color */
+    margin-bottom: 15px; /* Bottom margin for spacing */
 }
 
+/* Styling for each post container */
 .post {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    background-color: #fff; /* White background color */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
     margin-bottom: 20px; /* Adjust spacing between posts */
-    padding: 15px;
+    padding: 15px; /* Padding inside each post */
 }
 
+/* Styling for post content within a post */
 .post-content {
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Bottom margin for spacing */
 }
 
+/* Styling for images within posts */
 .post-image {
-    max-width: 100%;
-    /* Ensure image does not exceed container width */
-    height: auto;
-    /* Maintain aspect ratio */
-    display: block;
-    /* Treat image as a block element */
-    margin-top: 10px;
-    /* Add space above the image */
-    max-height: 300px;
-    /* Limit maximum height of the images */
-    object-fit: contain;
-    /* Ensure the image is fully contained within its dimensions */
+    max-width: 100%; /* Ensure image does not exceed container width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Treat image as a block element */
+    margin-top: 10px; /* Top margin for spacing */
+    max-height: 300px; /* Limit maximum height of images */
+    object-fit: contain; /* Ensure the image is fully contained within its dimensions */
 }
 
+/* Reset default styling for unordered lists */
 ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+    list-style-type: none; /* Remove bullets from lists */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
 }
 
+/* Styling for list items within lists */
 li {
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Bottom margin for spacing between list items */
 }
 
+/* Styling for links within list items */
 li a {
-    text-decoration: none;
-    color: #007bff;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    text-decoration: none; /* Remove underline from links */
+    color: #007bff; /* Blue link color */
+    font-weight: bold; /* Bold text for links */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
 }
 
+/* Hover effect for links within list items */
 li a:hover {
-    color: #0056b3;
+    color: #0056b3; /* Darker blue color on hover */
 }
 
+/* Styling for sponsor links */
 .sponsor-link {
-    display: block;
-    margin-top: 20px;
-    text-align: center;
+    display: block; /* Display links as block elements */
+    margin-top: 20px; /* Top margin for spacing */
+    text-align: center; /* Center-align text */
 }
 
+/* Styling for images within sponsor links */
 .sponsor-link img {
-    max-width: 100%;
-    height: auto;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    max-width: 100%; /* Ensure images do not exceed container width */
+    height: auto; /* Maintain aspect ratio */
+    border: 1px solid #ccc; /* Light gray border around images */
+    border-radius: 5px; /* Rounded corners for images */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Light shadow effect */
 }
 
+/* Hover effect for images within sponsor links */
 .sponsor-link:hover img {
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
+    opacity: 0.8; /* Reduced opacity on hover */
+    transition: opacity 0.3s ease; /* Smooth opacity transition */
 }
 
-.news-story h3, .news-story h4, .news-story h5, .news-story p {
-    margin: 0 0 15px 0;
+/* Styling for headings and paragraphs within news stories */
+.news-story h5 {
+    margin: 0 0 8px 0;
+    font-size: 1rem;
 }
 
+.news-story p {
+        font-size: 0.8rem; /* Adjust the font size to make it smaller */ 
+        margin: 0 0 5px 0;   
+}
+
+/* Styling for "Read more" buttons */
 .read-more {
-    background: none;
-    border: none;
-    color: #007bff;
-    text-decoration: underline;
-    cursor: pointer;
-    padding: 0;
+    background: none; /* Transparent background */
+    border: none; /* No border */
+    color: #007bff; /* Blue text color */
+    text-decoration: underline; /* Underlined text */
+    cursor: pointer; /* Pointer cursor */
+    padding: 0; /* No padding */
 }
 
+/* Hover effect for "Read more" buttons */
 .read-more:hover {
-    color: #0056b3;
+    color: #c3dbf5; /* Darker blue color on hover */
 }
 
+/* Styling for left and right sidebars */
 .left-sidebar,
 .right-sidebar {
-    height: 100%;
-    overflow-y: auto;
+    height: 100%; /* Ensure sidebars fill the entire height */
+    overflow-y: auto; /* Enable vertical scrollbar when content overflows */
 }
 
+/* Styling for textareas and input fields */
 textarea,
 input {
-    margin-bottom: 15px;
-    padding: 15px;
-    font-size: 1.1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px; /* Bottom margin for spacing */
+    padding: 15px; /* Padding inside textareas and input fields */
+    font-size: 1.1rem; /* Font size for textareas and input fields */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Inset shadow effect */
 }
 
+/* Styling for character count display */
 #charCount {
-    font-size: 1rem;
-    color: #6c757d;
-    margin-bottom: 15px;
+    font-size: 1rem; /* Font size for character count */
+    color: #6c757d; /* Gray text color */
+    margin-bottom: 15px; /* Bottom margin for spacing */
 }
 
+/* Styling for buttons */
 button {
-    padding: 3px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    padding: 3px; /* Padding inside buttons */
+    background-color: #007bff; /* Blue background color */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 3px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
 }
 
+/* Hover effect for buttons */
 button:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Darker blue color on hover */
 }
 
+/* Styling for "Post" buttons */
 .post-button {
-    padding: 15px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    padding: 15px; /* Padding inside "Post" buttons */
+    background-color: #007bff; /* Blue background color */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
 }
 
+/* Hover effect for "Post" buttons */
 .post-button:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Darker blue color on hover */
 }
 
-/* Add this to make the middle column transparent */
+/* Styling to make the middle column transparent */
 .main-content {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
 }
 
+/* Styling to give a semi-transparent background to left and right sidebars */
 .left-sidebar,
 .right-sidebar {
-    background-color: rgba(255, 255, 255, 0.5);
-}
-
-/* Custom background for columns */
-/*.custom-bg-left {
-    background-color: rgba(224, 247, 250, 0.8);
-}
-
-.custom-bg-middle {
-    background-color: rgba(255, 255, 255, 0.5);
-}
-
-.custom-bg-right {
-    background-color: rgba(224, 247, 250, 0.8);
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
 }
