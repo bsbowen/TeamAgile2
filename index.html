@@ -1,406 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Title of the webpage -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wassup</title>
-    <!-- Link to the external CSS stylesheet -->
+    <!-- Link to Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
+</head>
+<body>
     <!-- Main container of body -->
-    <div class="container">
-      <!-- Header with logo -->
-      <div class="top-box">
-        <img src="logo3.png" alt="Wassup Logo" width="350" />
-      </div>
-      <!-- Left sidebar for links to other pages and sponsor ads -->
-      <div class="left-sidebar">
-        <h2>Picked Just for You</h2>
-        <hr />
-        <ul>
-          <li><a href="https://espn.com" target="_blank">ESPN</a></li>
-          <li><a href="https://mlb.com" target="_blank">MLB</a></li>
-          <li><a href="https://foxsports.com" target="_blank">FOX SPORTS</a></li>
-          <li><a href="https://ballysports.com" target="_blank">BALLY SPORTS</a></li>
-          <li><a href="https://bleacherreport.com" target="_blank" >BLEACHER REPORT</a></li>
-          <li><a href="https://nbcsports.com" target="_blank" >NBC SPORTS</a></li>
-        </ul>
-        <hr>
-        <a href="https://dickssportinggoods.com" target="_blank" class="sponsor-link">
-          <img
-            src="dicks.png"
-            alt="Dick's curbside and In-Store Pickup Coupon"
-          />
-        </a>
-        <a href="https://playitagainsports.com" target="_blank" class="sponsor-link">
-          <img src="playitagain.png" alt="PLay It Again Sports" />
-        </a>
-        <a href="https://academy.com" target="_blank" class="sponsor-link">
-          <img
-            src="academy.png"
-            alt="Academy Sports 10% Off First Purchase Coupon"
-          />
-        </a>
-        <a href="https://sportsmans.com" target="_blank" class="sponsor-link">
-          <img src="sportsman.png" alt="Sportsman's Warehouse 10% Off Coupon" />
-        </a>
-      </div>
-
-      <!-- Main content area -->
-      <div class="main-content">
-        <!-- Main heading -->
-
-        <!-- Form for submitting posts -->
-        <form id="postForm">
-          <!-- Textarea for post content with placeholder and character limit of 280 -->
-          <textarea
-            id="postContent"
-            placeholder="What's on your Mind?"
-            maxlength="280"
-            required
-          ></textarea>
-          <!-- Character count display -->
-          <div id="charCount">0/280</div>
-          <!-- Input field for post author -->
-          <input type="text" id="postAuthor" placeholder="Author" required>
-          <!-- Input field for post tags -->
-          <input
-            type="text"
-            id="postTags"
-            placeholder="Tags (comma separated)"
-          />
-          <!-- New input for image upload -->
-          <input type="file" id="imageInput" accept="image/*" />
-          <!-- Submit button for posting -->
-          <button type="submit" class="post-button">Post</button>
-        </form>
-        <!-- Input field for searching posts -->
-        <input type="text" id="search" placeholder="Search by keyword" />
-        <!-- Container for displaying posts -->
-        <div id="feed"></div>
-      </div>
-
-      <!-- Right sidebar for news feed stories -->
-      <div class="right-sidebar">
-        <h2>News Feed</h2>
-        <hr />
-        <div class="news-story">
-          <h3>Seabright Daily News</h3>
-          <h4>July 16, 2024</h4>
-          <h5><i>Local Man Arrested for Fish Heist at Seabright Groceries</i></h5>
-          <p>
-            <b>Seabright, NC</b> – In a bizarre incident that left the residents of
-            Seabright both amused and astonished, local man Fisher Fletemeyer
-            was arrested
-            <span class="more-text" style="display: none"
-              >yesterday afternoon for attempting to steal the entire stock of
-              fish from Seabright Groceries. The incident occurred around 2 PM,
-              just as the supermarket was bustling with shoppers eager to
-              purchase the highly anticipated fresh catch of the season. Fisher
-              Fletemeyer, known in the community for his unusual name and
-              passionate interest in marine life, entered the store wearing an
-              oversized trench coat. According to eyewitnesses, Fletemeyer was
-              seen loitering around the seafood section for an extended period.
-              His suspicious behavior was captured on the store's security
-              cameras, prompting store manager Mrs. Eleanor Hensley to
-              investigate. "I received an alert from security about a man acting
-              oddly in the seafood aisle," Hensley stated. "When I approached
-              him, I noticed his coat was bulging, and there was a distinct
-              smell of fish." Hensley confronted Fletemeyer, who attempted to
-              make a hasty exit. As he dashed toward the door, fish of various
-              types—including salmon, cod, and mackerel—fell from his coat,
-              creating a chaotic scene. "It was like something out of a
-              slapstick comedy," one shopper recounted. "People were dodging
-              fish left and right." Security personnel quickly intervened,
-              detaining Fletemeyer until police arrived. Officer Robert
-              Williams, who led the arrest, commented on the unusual nature of
-              the crime. "In all my years on the force, I've never seen anything
-              quite like this. Mr. Fletemeyer had stuffed his coat with fish,
-              presumably intending to take them all home." Fletemeyer was taken
-              into custody without further incident. He faces charges of theft
-              and disorderly conduct. When questioned about his actions,
-              Fletemeyer reportedly expressed deep remorse, attributing his
-              behavior to an overwhelming love for fish. Residents of Seabright
-              have reacted with a mixture of shock and humor. "It's a small
-              town, and we all know Fisher and his fish obsession," said local
-              resident Martha Greene. "But this is taking it to another level."
-              Seabright Groceries has since restocked its seafood section and
-              assures customers that such incidents are rare. "We're reviewing
-              our security measures to prevent any future fish heists," stated
-              Mrs. Hensley. As the story of Fisher Fletemeyer's fish fiasco
-              spreads, it serves as a peculiar reminder of the lengths to which
-              some will go for their passions. Fletemeyer is scheduled to appear
-              in court next week, where the town will learn more about the
-              motivations behind his fishy caper.
-            </span>
-            <button class="read-more" onclick="toggleReadMore(this)">
-              Read more
-            </button>
-            <hr/
-          </p>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center py-4">
+                <img src="logo3.png" alt="Wassup Logo" class="float-left mb-4" />
+            </div>
         </div>
-        <div class="news-story">
-          <h3>Wilmington Gazette</h3>
-          <h4>July 16th, 2024</h4>
-          <h5><i>Christina Holland Wins Wilmington Mayoral Election</i></h5>
-          <p>
-            <b>Wilmington, NC</b> – In a historic and closely contested race, Christina
-            Holland emerged victorious in the Wilmington mayoral election,
-            <span class="more-text" style="display: none"
-              >becoming the first woman to hold the office in the city's
-              history. The election results were announced late last night,
-              marking a significant milestone for Wilmington's political
-              landscape. Holland, a lifelong Wilmington resident and former city
-              councilwoman, campaigned on a platform of community
-              revitalization, economic development, and improved public safety.
-              Her grassroots campaign resonated with voters across the city,
-              earning her widespread support and a decisive win over her
-              opponent, incumbent Mayor Robert Langford. With 52% of the vote,
-              Holland secured a clear majority, reflecting the city's desire for
-              change and new leadership. "This victory belongs to the people of
-              Wilmington," Holland declared in her acceptance speech. "Together,
-              we will build a brighter, safer, and more prosperous future for
-              our city." Holland's campaign was marked by her commitment to
-              addressing the city's most pressing issues. She pledged to tackle
-              crime by increasing police presence and implementing
-              community-based programs to reduce violence. Her economic plans
-              include attracting new businesses, supporting local entrepreneurs,
-              and creating job opportunities for residents. A key aspect of
-              Holland's platform was her focus on community engagement. She held
-              numerous town hall meetings, listening sessions, and neighborhood
-              walks, ensuring that the voices of Wilmington's diverse population
-              were heard. "Christina has always been there for our community,"
-              said supporter Maria Sanchez. "She listens to us and fights for
-              what we need." The election saw a high voter turnout, with
-              citizens eager to make their voices heard. "This election was
-              about more than just choosing a new mayor," said political analyst
-              James Fulton. "It was about setting a new direction for Wilmington
-              and addressing long-standing issues with fresh ideas." Holland's
-              victory is also seen as a triumph for women in politics. As the
-              first female mayor of Wilmington, she has broken a significant
-              barrier and inspired many. "It's a proud moment for our city,"
-              said supporter and women's rights advocate Clara Jenkins.
-              "Christina's win shows that women can and will lead at all levels
-              of government." Outgoing Mayor Robert Langford conceded the race
-              and congratulated Holland on her victory. "While we may have
-              differed on many issues, I respect the will of the voters and wish
-              Christina all the best as she takes on this important role,"
-              Langford said in a statement. As Holland prepares to take office,
-              she faces the challenge of uniting the city and delivering on her
-              campaign promises. Her first order of business will be assembling
-              a diverse and experienced team to help implement her vision for
-              Wilmington. "This is just the beginning," Holland said. "There's a
-              lot of work to do, and I am ready to get started." The city of
-              Wilmington looks forward to a new chapter under Mayor Christina
-              Holland's leadership, hopeful for the positive changes she has
-              pledged to bring.
-            </span>
-            <button class="read-more" onclick="toggleReadMore(this)">
-              Read more
-            </button>
-            <hr />
-          </p>
+        <div class="row justify-content-center">
+            <!-- Left sidebar for links to other pages and sponsor ads -->
+            <div class="col-12 col-md-3 mb-4 custom-bg-left">
+                <div class="left-sidebar p-3 rounded">
+                    <h2>Picked Just for You</h2>
+                    <hr />
+                    <ul>
+                        <li><a href="https://espn.com" target="_blank">ESPN</a></li>
+                        <li><a href="https://mlb.com" target="_blank">MLB</a></li>
+                        <li><a href="https://foxsports.com" target="_blank">FOX SPORTS</a></li>
+                        <li><a href="https://ballysports.com" target="_blank">BALLY SPORTS</a></li>
+                        <li><a href="https://bleacherreport.com" target="_blank">BLEACHER REPORT</a></li>
+                        <li><a href="https://nbcsports.com" target="_blank">NBC SPORTS</a></li>
+                    </ul>
+                    <hr>
+                    <a href="https://dickssportinggoods.com" target="_blank" class="sponsor-link">
+                        <img src="dicks.png" alt="Dick's curbside and In-Store Pickup Coupon" class="img-fluid img-thumbnail" />
+                    </a>
+                    <a href="https://playitagainsports.com" target="_blank" class="sponsor-link">
+                        <img src="playitagain.png" alt="Play It Again Sports" class="img-fluid img-thumbnail" />
+                    </a>
+                    <a href="https://academy.com" target="_blank" class="sponsor-link">
+                        <img src="academy.png" alt="Academy Sports 10% Off First Purchase Coupon" class="img-fluid img-thumbnail" />
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Main content area -->
+            <div class="col-12 col-md-6 mb-4 custom-bg-middle">
+                <div class="main-content p-3 rounded">
+                    <form id="postForm">
+                        <textarea id="postContent" class="form-control" placeholder="What's on your Mind?" maxlength="280" required></textarea>
+                        <div id="charCount" class="mt-2">0/280</div>
+                        <input type="text" id="postAuthor" class="form-control mt-2" placeholder="Author" required>
+                        <input type="text" id="postTags" class="form-control mt-2" placeholder="Tags (comma separated)">
+                        <input type="file" id="imageInput" class="form-control-file mt-2" accept="image/*">
+                        <button type="submit" class="btn btn-primary mt-2">Post</button>
+                    </form>
+                    <input type="text" id="search" class="form-control mt-4" placeholder="Search by keyword">
+                    <div id="feed" class="mt-4"></div>
+                </div>
+            </div>
+            
+            <!-- Right sidebar for news feed stories -->
+            <div class="col-12 col-md-3 mb-4 custom-bg-right">
+                <div class="right-sidebar p-3 rounded">
+                    <h2>News Feed</h2>
+                    <hr />
+                    <div class="container-fluid news-story p-3 bg-light rounded mb-3">
+                        <h3>Seabright Daily News</h3>
+                        <h4>July 16, 2024</h4>
+                        <h5><i>Local Man Arrested for Fish Heist at Seabright Groceries</i></h5>
+                        <p>
+                            <b>Seabright, NC</b> – In a bizarre incident that left the residents of Seabright both amused and astonished, 
+                            local man Fisher Fletemeyer was arrested
+                            <span class="more-text" style="display: none">
+                              yesterday afternoon for attempting to steal the entire stock of fish from Seabright Groceries. The incident
+                              occurred around 2 PM, just as the supermarket was bustling with shoppers. Fisher Fletemeyer, known in the 
+                              community for his unusual name, entered the store wearing an oversized trench coat and was later seen 
+                              loitering around the seafood section for an extended period. His suspicious behavior was captured on the 
+                              store's security cameras, prompting store manager to investigate. When confronted, Fletemeyer attempted 
+                              to make a hasty exit. As he dashed toward the door, fish of various types fell from his coat, creating a 
+                              chaotic scene. Fletemeyer was taken into custody without further incident and faces charges of theft and 
+                              disorderly conduct. 
+                              </span>
+                            <button class="read-more" onclick="toggleReadMore(this)">Read more</button>
+                            <hr />
+                        </p>
+                    </div>
+                    <!-- Placeholder for additional news stories -->
+                    <div class="container-fluid news-story p-3 bg-light rounded mb-3">
+                        <h3>Wilmington Gazette</h3>
+                        <h4>July 17, 2024</h4>
+                        <h5><i>Christina Holland Wins Wilmington Mayoral Election</i></h5>
+                        <p>
+                            <b>Wilmington, NC</b> – In a historic and closely contested race, Christina Holland 
+                              emerged victorious in the Wilmington mayoral election,
+                                <span class="more-text" style="display: none">
+                                becoming the first woman to hold the office in the city's history. The election results were announced 
+                                late last night, marking a significant milestone for Wilmington's political landscape. Holland, a lifelong
+                                Wilmington resident and former city councilwoman, campaigned on a platform of education reform. "It's a 
+                                proud moment for our city. This is just the beginning," Holland said, hopeful for the positive changes 
+                                she has pledged to bring.
+                                </span>
+                            <button class="read-more" onclick="toggleReadMore(this)">Read more</button>
+                            <hr />
+                        </p>
+                    </div>
+                    <div class="container-fluid news-story p-3 bg-light rounded mb-3">
+                        <h3>Wilmington Gazette</h3>
+                        <h4>July 18, 2024</h4>
+                        <h5><i>Local Woman Chloe Evans Mysteriously Transformed into a Cat</i></h5>
+                        <p>
+                            <b>Wilmington, NC</b> – In a bizarre and unexplained incident, Chloe Evans, a well-known local artist and resident
+                            of Wilmington, has been mysteriously transformed into a cat.
+                            <span class="more-text" style="display: none">The strange occurrence has left the community and authorities baffled, 
+                              sparking a mix of concern and curiosity throughout the city. The transformation reportedly happened late last night in
+                              Evans' downtown apartment. According to her roommate, Sarah Mitchell, Chloe had been working on a new painting when she
+                              suddenly felt ill. "She said she felt dizzy and went to lie down," Mitchell recounted. "A few minutes later, I heard 
+                              a strange noise coming from her room. When I went to check on her, Chloe was gone, and a black and white cat was 
+                              sitting on her bed." The Wilmington Police Department has launched an investigation but admits they are at a loss. 
+                              "This is unlike any case we've ever dealt with," said Police Chief Laura Bennett. "We're exploring all possibilities, 
+                              but for now, our primary concern is Chloe's well-being."
+                          </span>
+                            <button class="read-more" onclick="toggleReadMore(this)">Read more</button>
+                            <hr />
+                        </p>
+                    </div>
+                    <div class="container-fluid news-story p-3 bg-light rounded mb-3">
+                        <h3>Wilmington Gazette</h3>
+                        <h4>July 19, 2024</h4>
+                        <h5><i>Wilmington Resident Austin Murphy Wins $50 Million Lottery Jackpot</i></h5>
+                        <p>
+                            <b>Wilmington, NC</b> – In a stroke of incredible luck, Austin Murphy, a longtime Wilmington resident and local 
+                            mechanic, has won the $50 million jackpot in the state lottery.
+                            <span class="more-text" style="display: none">The life-changing win was announced last night, catapulting
+                              Murphy from his modest life into the realm of multi-millionaires. Murphy, 34, purchased the winning ticket 
+                              from his regular corner store, QuickMart, on Market Street. "I still can't believe it," Murphy exclaimed
+                              during a press conference held outside his home. "I was watching the drawing on TV, and when my numbers came 
+                              up, I just screamed. It's surreal. This money will definitely make life a lot easier.” "Austin's win is a 
+                              reminder that dreams can come true, and we're all excited to see what the future holds for him," said Mayor 
+                              Christina Holland. 
+                            </span>
+                            <button class="read-more" onclick="toggleReadMore(this)">Read more</button>
+                            <hr />
+                        </p>
+                    </div>
+                    <div class="container-fluid news-story p-3 bg-light rounded mb-3">
+                        <h3>Wilmington Gazette</h3>
+                        <h4>July 20, 2024</h4>
+                        <h5><i>Local Teacher Brittany Bowen Discovers Secret Treasure Chest and Time Capsule</i></h5>
+                        <p>
+                            <b>Wilmington, NC</b> – In a stunning and historic find, Brittany Bowen, a beloved local history teacher, 
+                            unearthed a secret treasure chest and time capsule while gardening in her backyard.
+                            <span class="more-text" style="display: none">The remarkable discovery has captivated the town of Wilmington,
+                              igniting curiosity and excitement about the contents and origins of the mysterious chest. Bowen stumbled 
+                              upon the hidden trove last Saturday. "I was planting some new rose bushes when my shovel hit something hard,"
+                              she recounted. "At first, I thought it was just a rock, but then I realized it was something much more 
+                              significant." After carefully digging around the object, Bowen revealed an intricately decorated
+                              item. Bowen's discovery has thrilled local historians. The Wilmington Historical Society plans to display 
+                              the contents of the treasure chest and time capsule in a special exhibit at the city museum. "This discovery 
+                              is a significant addition to our local heritage," said Mayor Christina Holland. 
+                            </span>
+                            <button class="read-more" onclick="toggleReadMore(this)">Read more</button>
+                            <hr />
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="news-story">
-          <h3>Wilmington Gazette</h3>
-          <h4>July 16th, 2024</h4>
-          <h5><i>Local Woman Chloe Evans Mysteriously Transformed into a Cat</i></h5>
-          <p>
-            <b>Wilmington, NC</b> – In a bizarre and unexplained incident, Chloe Evans,
-            a well-known local artist and resident of Wilmington, has been
-            mysteriously transformed into a cat.
-            <span class="more-text" style="display: none"
-              >The strange occurrence has left the community and authorities
-              baffled, sparking a mix of concern and curiosity throughout the
-              city. The transformation reportedly happened late last night in
-              Evans' downtown apartment. According to her roommate, Sarah
-              Mitchell, Chloe had been working on a new painting when she
-              suddenly felt ill. "She said she felt dizzy and went to lie down,"
-              Mitchell recounted. "A few minutes later, I heard a strange noise
-              coming from her room. When I went to check on her, Chloe was gone,
-              and a black and white cat was sitting on her bed." The cat, which
-              has distinct markings resembling a heart shape on its back,
-              exhibited behaviors and mannerisms strikingly similar to Evans.
-              Friends and family were initially skeptical, but after noticing
-              the cat's unique traits, many began to believe in the
-              transformation. Dr. Nathanial Prowse, a local veterinarian,
-              examined the cat and confirmed that it showed no signs of being
-              anything other than a typical feline. "Physically, the cat is
-              perfectly healthy," Prowse stated. "However, the circumstances
-              surrounding this case are unprecedented. I've never encountered
-              anything like this in my career." Speculation and rumors have
-              spread rapidly, with some suggesting that Evans may have been the
-              victim of a magical spell or a scientific experiment gone wrong.
-              The Wilmington Police Department has launched an investigation but
-              admits they are at a loss. "This is unlike any case we've ever
-              dealt with," said Police Chief Laura Bennett. "We're exploring all
-              possibilities, but for now, our primary concern is Chloe's
-              well-being." Local mystic and herbalist, Agnes Thorn, has offered
-              her perspective on the incident. "There are ancient legends and
-              folklore about transformations like this," Thorn explained. "While
-              rare, such occurrences are often linked to powerful enchantments
-              or curses. It's possible that Chloe's artistic talents and
-              open-minded nature made her susceptible to such forces." The
-              transformation has drawn significant media attention, and
-              Wilmington residents have rallied in support of Evans. A vigil was
-              held at the city park, where friends, family, and community
-              members gathered to share their hopes for her safe return to human
-              form. "Chloe is a vibrant part of our community," said neighbor
-              Thomas Greene. "We are all hoping for her recovery and will do
-              whatever we can to help." In the meantime, Sarah Mitchell has
-              taken on the role of caretaker for the cat, ensuring it remains
-              safe and comfortable. "Chloe's art studio is now a temporary haven
-              for her," Mitchell said. "We play her favorite music and surround
-              her with familiar things, hoping it might trigger a change." As
-              the investigation continues, the residents of Wilmington remain
-              captivated by this extraordinary event. Scientists, mystics, and
-              curious onlookers are all attempting to unravel the mystery of how
-              Chloe Evans was turned into a cat and, more importantly, how she
-              can be restored to her human form. For now, the city waits with
-              bated breath, hoping for a resolution to this extraordinary and
-              mystifying case.
-            </span>
-            <button class="read-more" onclick="toggleReadMore(this)">
-              Read more
-            </button>
-            <hr />
-          </p>
-        </div>
-        <div class="news-story">
-          <h3>Wilmington Gazette</h3>
-          <h4>July 16th, 2024</h4>
-          <h5>
-           <i> Wilmington Resident Austin Murphy Wins $50 Million Lottery Jackpot</i>
-          </h5>
-          <p>
-            <b>Wilmington, NC</b> – In a stroke of incredible luck, Austin Murphy, a
-            longtime Wilmington resident and local mechanic, has won the $50
-            million jackpot in the state lottery.
-            <span class="more-text" style="display: none"
-              >The life-changing win was announced last night, catapulting
-              Murphy from his modest life into the realm of multi-millionaires.
-              Murphy, 34, purchased the winning ticket from his regular corner
-              store, QuickMart, on Market Street. Known for his hard work and
-              friendly demeanor, Murphy has been a familiar face in the
-              community, often seen fixing cars at his family-owned garage,
-              Murphy's Auto Repair. "I still can't believe it," Murphy exclaimed
-              during a press conference held outside his home. "I was watching
-              the drawing on TV with my wife, and when our numbers came up, we
-              just screamed. It's surreal." Murphy's winning numbers—7, 12, 23,
-              34, 45, and 9—were a combination of his birthdate and important
-              anniversaries in his life. "I've been playing these same numbers
-              for years," he said. "I guess persistence really does pay off."
-              The news of Murphy's win has spread quickly throughout Wilmington,
-              with friends, family, and neighbors all expressing their joy and
-              congratulations. "Austin is one of the most genuine and
-              hardworking people I know," said neighbor Lisa Carter. "If anyone
-              deserves this, it's him." Murphy has already made plans for his
-              newfound fortune, emphasizing that he intends to remain grounded
-              and responsible. "The first thing I want to do is pay off my
-              parents' mortgage and make sure my family is taken care of," he
-              said. "Then, I'd like to invest in expanding the garage and maybe
-              take a nice vacation with my wife and kids." Despite the sudden
-              windfall, Murphy is committed to maintaining a sense of normalcy.
-              "I love what I do, and I don't see myself giving up the garage,"
-              he explained. "But this money will definitely make life a lot
-              easier and give us opportunities we never thought possible." The
-              owners of QuickMart, where the winning ticket was sold, will also
-              receive a bonus for their part in the win. "We're thrilled for
-              Austin," said store owner Raj Patel. "He's a regular customer and
-              a good friend. This is amazing news for him and his family."
-              Lottery officials have reminded the public of the importance of
-              financial planning for lottery winners. "Winning such a large sum
-              can be overwhelming," said lottery spokesperson Helen Marks. "We
-              encourage all winners to seek professional advice to ensure their
-              financial future is secure." As Murphy and his family adjust to
-              their newfound wealth, the Wilmington community stands behind
-              them, celebrating this extraordinary moment. "It's a feel-good
-              story for all of us," said Mayor Christina Holland. "Austin's win
-              is a reminder that dreams can come true, and we're all excited to
-              see what the future holds for him." For now, Austin Murphy remains
-              humble and grateful, ready to embrace the opportunities and
-              challenges that come with his remarkable lottery win. The
-              Wilmington Gazette will continue to follow his journey and share
-              updates with our readers.
-            </span>
-            <button class="read-more" onclick="toggleReadMore(this)">
-              Read more
-            </button>
-            <hr />
-          </p>
-        </div>
-        <div class="news-story">
-          <h3>Wilmington Gazette</h3>
-          <h4>July 16th, 2024</h4>
-          <h5>
-            <i>Local Teacher Brittany Bowen Discovers Secret Treasure Chest and
-            Time Capsule </i>
-          </h5>
-          <p>
-            <b>Wilmington, NC</b> – In a stunning and historic find, Brittany Bowen, a
-            beloved local history teacher, unearthed a secret treasure chest and
-            time capsule while gardening in her backyard.
-            <span class="more-text" style="display: none"
-              >The remarkable discovery has captivated the town of Wilmington,
-              igniting curiosity and excitement about the contents and origins
-              of the mysterious chest. Bowen, who teaches at Wilmington High
-              School, stumbled upon the hidden trove last Saturday. "I was
-              planting some new rose bushes when my shovel hit something hard,"
-              she recounted. "At first, I thought it was just a rock, but then I
-              realized it was something much more significant." After carefully
-              digging around the object, Bowen revealed an intricately decorated
-              chest, locked and sealed. Alongside it was a smaller, cylindrical
-              container, clearly marked as a time capsule with the date "July 4,
-              1924" engraved on it. Recognizing the potential historical
-              significance of her discovery, Bowen immediately contacted the
-              Wilmington Historical Society. "This is a find of a lifetime,"
-              said Dr. Harold Thompson, the society's director. "We don't often
-              get to experience such a direct link to the past." The treasure
-              chest and time capsule were transported to the Historical Society
-              for further examination. Under the watchful eyes of historians and
-              preservation experts, the chest was carefully opened, revealing a
-              trove of artifacts, including antique jewelry, coins, letters, and
-              photographs. The time capsule contained newspapers, personal
-              diaries, and memorabilia from the 1920s, offering a fascinating
-              glimpse into life a century ago. The origin of the chest and time
-              capsule remains a mystery, but initial research suggests they may
-              have been buried by a prominent Wilmington family. "We believe the
-              items were hidden during a period of economic or social upheaval,
-              possibly during the Great Depression," Dr. Thompson explained.
-              "The contents provide invaluable insights into the lives and
-              experiences of people from that era." Bowen's discovery has not
-              only thrilled historians but also inspired her students and the
-              wider community. "Ms. Bowen always makes history come alive in the
-              classroom," said former student Jake Miller. "Now she's found a
-              piece of history in her own backyard. It's incredible." The
-              Wilmington Historical Society plans to display the contents of the
-              treasure chest and time capsule in a special exhibit at the city
-              museum. "This discovery is a significant addition to our local
-              heritage," said Mayor Christina Holland. "It reminds us of the
-              rich history that surrounds us and the importance of preserving it
-              for future generations." Bowen, who remains humble about her find,
-              hopes it will spark greater interest in history among her students
-              and the community. "I'm just thrilled to have been a part of
-              uncovering this piece of our past," she said. "It's a reminder
-              that history is all around us, waiting to be discovered." As the
-              news of Brittany Bowen's discovery spreads, Wilmington residents
-              eagerly anticipate the unveiling of the exhibit, which promises to
-              offer a unique and personal connection to the town's history. The
-              Wilmington Gazette will continue to provide updates on this
-              extraordinary find and its impact on our understanding of the
-              past.
-            </span>
-            <button class="read-more" onclick="toggleReadMore(this)">
-              Read more
-            </button>
-            <hr />
-          </p>
-        </div>
-      </div>
     </div>
-    <!-- Links to the external JavaScript file -->
+    <!-- Link to Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
-  </body>
+</body>
 </html>

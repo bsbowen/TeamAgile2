@@ -1,20 +1,18 @@
-/* Global styles for the body element */
 body {
     font-family: Arial, sans-serif;
-    /* Set the default font family */
     margin: 0;
-    /* Remove default margin */
     padding: 0;
-    /* Remove default padding */
     box-sizing: border-box;
-    /* Include padding and border in the element's total width and height */
-    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-    /* Background gradient */
+    background: #75ccff;
     min-height: 100vh;
-    /* Ensure full viewport height */
 }
 
-/* Styles for images within posts */
+h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
 .post-image {
     max-width: 100%;
     /* Ensure image does not exceed container width */
@@ -30,333 +28,132 @@ body {
     /* Ensure the image is fully contained within its dimensions */
 }
 
-/* Styles for the main container */
-.container {
-    max-width: 1200px;
-    /* Maximum width of the container */
-    margin: auto;
-    /* Center align the container */
-    padding: 40px;
-    /* Padding inside the container */
-    background: #75ccff;
-    /* Background color of the container */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Box shadow for a subtle lift effect */
-    border-radius: 10px;
-    /* Rounded corners for the container */
-    display: grid;
-    /* Use CSS grid for layout */
-    grid-template-columns: 1fr 2fr 1fr;
-    /* Three columns: left sidebar, main content, right sidebar */
-    gap: 20px;
-    /* Gap between grid columns */
-}
-
-/* Styles for a top box spanning all columns */
-.top-box {
-    grid-column: 1 / 4;
-    /* Span all three columns */
-}
-
-/* Styles for the left sidebar */
-.left-sidebar {
-    background-color: white;
-    /* Background color */
-    padding: 20px;
-    /* Padding inside the sidebar */
-    border-radius: 10px;
-    /* Rounded corners */
-    height: calc(100vh - 80px);
-    /* Adjust the height as needed */
-    overflow-y: auto;
-    /* Enable vertical scrolling if content overflows */
-}
-
-/* Styles for the logo */
-.logo {
-    text-align: center;
-    /* Center align text */
-    margin-bottom: 2px;
-    /* Margin bottom space */
-}
-
-.logo img {
-    max-width: 200px;
-    /* Maximum width for the logo image */
-    height: auto;
-    /* Maintain aspect ratio */
-}
-
-/* Styles for heading 2 */
-h2 {
-    font-size: 1.5rem;
-    /* Font size */
-    color: #333;
-    /* Text color */
-    margin-bottom: 15px;
-    /* Margin bottom space */
-}
-
-/* Styles for unordered lists */
 ul {
     list-style-type: none;
-    /* Remove default list styling */
     padding: 0;
-    /* Remove default padding */
     margin: 0;
-    /* Remove default margin */
 }
 
-/* Styles for list items */
 li {
     margin-bottom: 10px;
-    /* Margin bottom space */
 }
 
-/* Styles for links within list items */
 li a {
     text-decoration: none;
-    /* Remove underline from links */
     color: #007bff;
-    /* Link color */
     font-weight: bold;
-    /* Bold font weight */
     transition: color 0.3s ease;
-    /* Smooth color transition on hover */
 }
 
-/* Hover styles for links */
 li a:hover {
     color: #0056b3;
-    /* Darker blue color on hover */
 }
 
-/* Styles for sponsor links */
 .sponsor-link {
     display: block;
-    /* Make the link a block element */
     margin-top: 20px;
-    /* Margin above the sponsor link */
     text-align: center;
-    /* Center align text */
 }
 
-/* Styles for images within sponsor links */
 .sponsor-link img {
-    max-width: 250px;
-    /* Maximum width for sponsor images */
+    max-width: 100%;
     height: auto;
-    /* Maintain aspect ratio */
     border: 1px solid #ccc;
-    /* Optional: Add a border */
     border-radius: 5px;
-    /* Optional: Rounded corners */
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    /* Optional: Box shadow */
 }
 
-/* Hover styles for sponsor images */
 .sponsor-link:hover img {
     opacity: 0.8;
-    /* Reduce opacity on hover */
     transition: opacity 0.3s ease;
-    /* Smooth opacity transition */
 }
 
-/* Styles for the right sidebar */
+.news-story h3, .news-story h4, .news-story h5, .news-story p {
+    margin: 0 0 15px 0;
+}
+
+.read-more {
+    background: none;
+    border: none;
+    color: #007bff;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 0;
+}
+
+.read-more:hover {
+    color: #0056b3;
+}
+
+.left-sidebar,
 .right-sidebar {
-    background-color: white;
-    /* Background color */
-    padding: 20px;
-    /* Padding inside the sidebar */
-    border-radius: 10px;
-    /* Rounded corners */
-    height: calc(100vh - 80px);
-    /* Full height minus top and bottom padding */
+    height: 100%;
     overflow-y: auto;
-    /* Enable vertical scrolling if content overflows */
 }
 
-/* Styles for forms */
-form {
-    display: flex;
-    /* Use flexbox for form layout */
-    flex-direction: column;
-    /* Arrange form elements vertically */
-    margin-bottom: 30px;
-    /* Margin bottom space */
-}
-
-/* Styles for textareas and inputs */
 textarea,
 input {
     margin-bottom: 15px;
-    /* Margin bottom space */
     padding: 15px;
-    /* Padding inside textareas and inputs */
     font-size: 1.1rem;
-    /* Font size */
     border: 1px solid #ddd;
-    /* Border */
     border-radius: 5px;
-    /* Rounded corners */
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-    /* Inset shadow */
 }
 
-/* Styles for character count */
 #charCount {
     font-size: 1rem;
-    /* Font size */
     color: #6c757d;
-    /* Text color */
     margin-bottom: 15px;
-    /* Margin bottom space */
 }
 
-/* Styles for buttons */
 button {
     padding: 3px;
-    /* Padding inside buttons */
     background-color: #007bff;
-    /* Button background color */
     color: white;
-    /* Button text color */
     border: none;
-    /* Remove button border */
     border-radius: 3px;
-    /* Rounded corners */
     cursor: pointer;
-    /* Cursor style */
     transition: background-color 0.3s ease;
-    /* Smooth background color transition */
 }
 
-/* Hover styles for buttons */
 button:hover {
     background-color: #0056b3;
-    /* Darker blue on hover */
 }
 
 .post-button {
     padding: 15px;
-    /* Padding inside buttons */
     background-color: #007bff;
-    /* Button background color */
     color: white;
-    /* Button text color */
     border: none;
-    /* Remove button border */
     border-radius: 5px;
-    /* Rounded corners */
     cursor: pointer;
-    /* Cursor style */
     transition: background-color 0.3s ease;
-    /* Smooth background color transition */
 }
 
-/* Hover styles for buttons */
 .post-button:hover {
     background-color: #0056b3;
-    /* Darker blue on hover */
 }
 
-/* Styles for feed section */
-#feed {
-    display: flex;
-    /* Use flexbox for feed layout */
-    flex-direction: column;
-    /* Arrange feed items vertically */
+/* Add this to make the middle column transparent */
+.main-content {
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
-/* Styles for individual posts */
-.post {
-    background-color: #f8f9fa;
-    /* Background color */
-    padding: 15px;
-    /* Padding inside posts */
-    margin-bottom: 15px;
-    /* Margin bottom space */
-    border-radius: 5px;
-    /* Rounded corners */
-    position: relative;
-    /* Relative positioning */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Box shadow */
+.left-sidebar,
+.right-sidebar {
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
-/* Styles for post content */
-.post-content {
-    margin-bottom: 15px;
-    /* Margin bottom space */
-    font-size: 1.1rem;
-    /* Font size */
+/* Custom background for columns */
+/*.custom-bg-left {
+    background-color: rgba(224, 247, 250, 0.8);
 }
 
-/* Styles for post information */
-.post-info {
-    font-size: 1rem;
-    /* Font size */
-    color: #6c757d;
-    /* Text color */
+.custom-bg-middle {
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
-/* Styles for edit and delete buttons */
-.edit,
-.delete {
-    position: absolute;
-    /* Absolute positioning */
-    top: 15px;
-    /* Position from the top */
-    cursor: pointer;
-    /* Cursor style */
-    color: #007bff;
-    /* Button color */
-    transition: color 0.3s ease;
-    /* Smooth color transition */
-}
-
-/* Styles for edit button */
-.edit {
-    right: 70px;
-    /* Position from the right */
-}
-
-/* Styles for delete button */
-.delete {
-    right: 20px;
-    /* Position from the right */
-}
-
-/* Hover styles for edit and delete buttons */
-.edit:hover,
-.delete:hover {
-    color: #0056b3;
-    /* Darker blue on hover */
-}
-
-/* Media query for screens smaller than 600px */
-@media (max-width: 600px) {
-    .container {
-        padding: 20px;
-        /* Adjusted padding for smaller screens */
-    }
-
-    textarea,
-    input {
-        font-size: 1rem;
-        /* Adjusted font size for smaller screens */
-    }
-
-    .post {
-        padding: 10px;
-        /* Adjusted padding for posts on smaller screens */
-    }
-
-    button {
-        font-size: 1rem;
-        /* Adjusted font size for buttons on smaller screens */
-        padding: 10px;
-        /* Adjusted padding for buttons on smaller screens */
-    }
+.custom-bg-right {
+    background-color: rgba(224, 247, 250, 0.8);
 }
